@@ -1,0 +1,14 @@
+.example-card {
+    max-width: 400px;
+    background-color: rgba(172, 164, 164, 0.15);  
+    backdrop-filter: blur(5px);
+    // padding: 2px;
+    // margin-bottom: 10px;
+    border-radius: 5px;
+
+  }
+  
+  .example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  }
