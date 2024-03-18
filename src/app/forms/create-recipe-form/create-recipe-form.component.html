@@ -1,0 +1,36 @@
+<form (ngSubmit)="onSubmit(recipeItem)" class="form-css">
+    <div class="mb-4">
+        <mat-form-field class="w-full">
+            <mat-label class="mat-lebel-css">Title</mat-label>
+            <input matInput placeholder="title" value=""
+            name="title"  [(ngModel)]="recipeItem.title"  class="text-css">
+          </mat-form-field>
+    </div>
+    <div class="mb-4">
+        <mat-form-field class="w-full">
+            <mat-label class="mat-lebel-css">Description</mat-label>
+            <input matInput placeholder="description" value=""
+            name="description"  [(ngModel)]="recipeItem.description"  class="text-css">
+          </mat-form-field>
+    </div>
+
+    <div class="mb-4">
+        <mat-form-field class="w-full">
+            <mat-label class="mat-lebel-css">Image</mat-label>
+            <input matInput placeholder="image url" value=""
+            name="image"  [(ngModel)]="recipeItem.image"  class="text-css">
+          </mat-form-field>
+    </div>
+
+    <div class="mb-4">
+        <mat-radio-group name="foodType" [(ngModel)]="recipeItem.foodType" aria-label="Select an option">
+            <mat-radio-button value="veg">Veg</mat-radio-button>
+            <mat-radio-button value="Non-veg">Non-veg</mat-radio-button>
+          </mat-radio-group>
+    </div>
+    <div class="button-css">
+        <button   mat-raised-button color="primary" type="submit">
+            create
+        </button>
+    </div>
+</form>

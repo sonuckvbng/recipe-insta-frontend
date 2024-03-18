@@ -1,0 +1,38 @@
+<h2 class="text-center pt-5">Update recipe</h2>
+<form (ngSubmit)="onSubmit(recipeItem)" class="form-css">
+    <div class="mb-4">
+        <mat-form-field class="w-full">
+            <mat-label class="mat-lebel-css">Title</mat-label>
+            <input matInput placeholder="title" value="recipeItem.title"
+            name="title"  [(ngModel)]="recipeItem.title"  class="text-css">
+          </mat-form-field>
+    </div>
+    <div class="mb-4">
+        <mat-form-field class="w-full">
+            <mat-label class="mat-lebel-css">Description</mat-label>
+            <input matInput placeholder="description" value="recipeItem.description"
+            name="description"  [(ngModel)]="recipeItem.description"  class="text-css">
+          </mat-form-field>
+    </div>
+
+    <div class="mb-4">
+        <mat-form-field class="w-full">
+            <mat-label class="mat-lebel-css">Image</mat-label>
+            <input matInput placeholder="image url" value="recipeItem.image"
+            name="image"  [(ngModel)]="recipeItem.image"  class="text-css">
+          </mat-form-field>
+    </div>
+
+    <div class="mb-4">
+        <mat-radio-group name="foodType" [(ngModel)]="recipeItem.foodType" 
+        value="recipeItem.foodType" aria-label="Select an option">
+            <mat-radio-button value="veg">Veg</mat-radio-button>
+            <mat-radio-button value="Non-veg">Non-veg</mat-radio-button>
+          </mat-radio-group>
+    </div>
+    <div class="button-css">
+        <button   mat-raised-button color="primary" type="submit">
+            Update
+        </button>
+    </div>
+</form>
